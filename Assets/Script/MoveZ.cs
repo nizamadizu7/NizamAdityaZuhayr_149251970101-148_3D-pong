@@ -23,7 +23,7 @@ public class MoveZ : MonoBehaviour
     }
 
     private Vector3 GetInput(){
-        if(go.transform.position.z < 2.7 && go.transform.position.z > -3){
+        // if(go.transform.position.z < 2.7 && go.transform.position.z > -3){
             if(Input.GetKey(upKey))
             {
                 return Vector3.forward * speed;
@@ -32,7 +32,7 @@ public class MoveZ : MonoBehaviour
             {
                 return Vector3.back * speed;
             }else return Vector3.zero;            
-        }else return Vector3.zero;
+        // }else return Vector3.zero;
     }
 
     private void MoveObject(Vector3 movement) {

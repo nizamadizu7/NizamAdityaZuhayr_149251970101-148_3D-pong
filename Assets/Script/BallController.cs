@@ -10,9 +10,20 @@ public class BallController : MonoBehaviour
     public bool nama;
 
     private Rigidbody rb;
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = speed;
+        StartCoroutine(generateBall());
+    }
+
+    public void ResetBall(){
+        
+    }
+
+    IEnumerator generateBall(){
+        Debug.Log("test");
+        Debug.Log(Random.Range(1,4));
+        yield return new WaitForSeconds(3);
     }
 }
