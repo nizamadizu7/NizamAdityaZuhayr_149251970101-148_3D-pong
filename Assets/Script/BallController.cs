@@ -17,6 +17,11 @@ public class BallController : MonoBehaviour
         StartCoroutine(generateBall());
     }
 
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.name.Contains("Player")){
+            rb.velocity *= 2;
+        }
+    }
     public void ResetBall(){
         
     }

@@ -5,35 +5,54 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+
     public int player1;
     public int player2;
     public int player3;
     public int player4;
 
-    public int minScore;
+    public int maxScore;
 
     public BallController ball;
 
-    // public void AddRightScore(int increment)
-    // {
-    //     rightScore =rightScore - increment;
-    //     ball.ResetBall();
-    //     if (rightScore >= minScore)
-    //     {
-    //         GameOver();
-    //     }
+    public void Add1Score()
+    {
+        player1+=1;
+        ball.ResetBall();
+        if (player1 >=maxScore)
+        {
+            GameOver();
+        }
 
-    // }
+    }
+    public void Add2Score()
+    {
+        player2+=1;
+        ball.ResetBall();
+        if (player2 >=maxScore)
+        {
+            GameOver();
+        }
+    }
+    public void Add3Score()
+    {
+        player3+=1;
+        ball.ResetBall();
+        if (player3 >=maxScore)
+        {
+            GameOver();
+        }
+    }
+    public void Add4Score()
+    {
+        player4+=1;
+        ball.ResetBall();
+        if (player4 >=maxScore)
+        {
+            GameOver();
+        }
+    }
 
-    // public void AddLeftScore(int increment)
-    // {
-    //     leftScore = leftScore - increment;
-    //     ball.ResetBall();
-    //     if (leftScore >= minScore)
-    //     {
-    //         GameOver();
-    //     }
-    // }
 
     public void GameOver()
     {
